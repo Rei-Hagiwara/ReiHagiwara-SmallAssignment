@@ -27,14 +27,14 @@
     //桃とイチゴの価格を生成して格納
     require_once 'smallAssign1-genePrice.php';
     $gp = new GenePrice();
-    $peach = $gp->generatePrices( 15, 200, 300 );
-    $strawberry = $gp->generatePrices( 15, 400, 500 );
+    $peach = $gp->genePrice( 15, 200, 300 );
+    $strawberry = $gp->genePrice( 15, 400, 500 );
 
     //桃とイチゴの平均、最低、最大を見つけて格納
     require_once 'smallAssign1-getNums.php';
     $gn = new GetNums();
-    $peachNums = $gn->getNumbers( $peach );
-    $strawNums = $gn->getNumbers( $strawberry );
+    $peachNums = $gn->getNums( $peach );
+    $strawNums = $gn->getNums( $strawberry );
 ?>
 
 <table border="1">
